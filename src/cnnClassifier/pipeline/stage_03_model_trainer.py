@@ -1,11 +1,13 @@
 from cnnClassifier.config.configuration import ConfigurationManager
 from cnnClassifier.components.model_trainer import Training
 from cnnClassifier import logger
+from pathlib import Path
 
 
 
 STAGE_NAME = "Training"
-
+CONFIG_FILE_PATH = Path(r'C:/Users/LENOVO/Desktop/PROJECT/Chest-Cancer-Classification-using-MLflow-DVC/config/config.yaml')
+PARAMS_FILE_PATH = Path(r'C:/Users/LENOVO/Desktop/PROJECT/Chest-Cancer-Classification-using-MLflow-DVC/params.yaml')
 
 
 class ModelTrainingPipeline:
@@ -13,7 +15,7 @@ class ModelTrainingPipeline:
         pass
 
     def main(self):
-        config = ConfigurationManager()
+        config = ConfigurationManager(config_filepath=CONFIG_FILE_PATH, params_filepath=PARAMS_FILE_PATH)
         training_config = config.get_training_config()
         training = Training(config=training_config)
         training.get_base_model()
@@ -32,4 +34,3 @@ if __name__ == '__main__':
     except Exception as e:
         logger.exception(e)
         raise e
-        

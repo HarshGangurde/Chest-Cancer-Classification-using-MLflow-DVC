@@ -172,5 +172,4 @@ cython_debug/
 
 artifacts/*
 
-stage_03_model_trainer.py/*
 stage_04_model_evaluation.py/*
