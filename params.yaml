@@ -5,6 +5,9 @@ INCLUDE_TOP: False
 EPOCHS: 6
 CLASSES: 4
 WEIGHTS: imagenet
-LEARNING_RATE: 0.01
+LEARNING_RATE: 0.0001
 ACTIVATION : 'softmax'
 class_mode : 'categorical'
+DROPOUT: 0.5 
+FINE_TUNE_LAYERS: 15  # Unfreeze last 15 layers for fine-tuning
+CALLBACKS: ['EarlyStopping', 'ReduceLROnPlateau']
