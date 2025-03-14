@@ -85,7 +85,7 @@ class ConfigurationManager:
     def get_evaluation_config(self) -> EvaluationConfig:
         eval_config = EvaluationConfig(
             path_of_model="artifacts/training/model.h5",
-            training_data=r"C:\Users\LENOVO\Desktop\PROJECT\Chest-Cancer-Classification-using-MLflow-DVC\artifacts\data_ingestion\Data",
+            training_data=r"C:\Users\LENOVO\Desktop\PROJECT\Chest-Cancer-Classification-using-MLflow-DVC\artifacts\data_ingestion\Data\test",
             mlflow_uri="https://dagshub.com/harshgangurde077/Chest-Cancer-Classification-using-MLflow-DVC.mlflow",
             all_params=self.params,
             params_image_size=self.params.IMAGE_SIZE,

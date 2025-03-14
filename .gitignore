@@ -171,5 +171,11 @@ cython_debug/
 .pypirc
 
 artifacts/*
+44c988eb3d6ca5ba48b88ca4293180c3ac9f8768
 
-stage_04_model_evaluation.py/*
+
+
+
+export MLFLOW_TRACKING_URI="https://dagshub.com/harshgangurde077/Chest-Cancer-Classification-using-MLflow-DVC.mlflow"
+export MLFLOW_TRACKING_USERNAME="harshgangurde077"
+export MLFLOW_TRACKING_PASSWORD="44c988eb3d6ca5ba48b88ca4293180c3ac9f8768"
